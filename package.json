@@ -15,7 +15,7 @@
     "dev": "babel-node lib/main.js",
     "buildyaml": "yarn run --silent json2yaml resume/resume.json > resume/resume.yaml",
     "buildjson": "cat resume/resume.yaml | yarn run --silent yaml2json > resume/resume.json ; yarn run prettier -w resume/resume.json",
-    "buildhtml": "yarn dev export --resume resume/resume.json --theme full resume/resume.html",
+    "buildhtml": "yarn dev export --resume resume/resume.json --theme papirus resume/resume.html",
     "lint": "eslint --ignore-path .gitignore .",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
