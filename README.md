@@ -1,3 +1,18 @@
+# jsonresume-box
+
+This creates a "batteries included" everything-in-the-box repo that wraps jsonresume's resume-cli and adds the "full" theme and an extra unused theme.
+
+Some scripts to convert between YAML and JSON:
+```
+yarn run buildyaml
+yarn run buildhtml
+yarn run buildjson
+```
+
+You can start with an init'd resume.json file, and then convert it to YAML and edit that directly. Then build the HTML file after converting back to .json. Everything you need is in this repo.
+
+Create a separate resume repository and clone it in the route and keep your private resume.{json,yaml,html} source files there.
+
 # resume-cli
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jsonresume/public?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)

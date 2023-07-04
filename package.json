@@ -13,6 +13,9 @@
   ],
   "scripts": {
     "dev": "babel-node lib/main.js",
+    "buildyaml": "yarn run --silent json2yaml resume/resume.json > resume/resume.yaml",
+    "buildjson": "cat resume/resume.yaml | yarn run --silent yaml2json > resume/resume.json ; yarn run prettier -w resume/resume.json",
+    "buildhtml": "yarn dev export --resume resume/resume.json --theme full resume/resume.html",
     "lint": "eslint --ignore-path .gitignore .",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
@@ -29,6 +32,7 @@
     "resume": "build/main.js"
   },
   "dependencies": {
+    "@adius/yaml2json": "^1.0.1",
     "async": "^3.2.0",
     "browser-sync": "^2.26.7",
     "btoa": "^1.2.1",
@@ -37,8 +41,11 @@
     "dotenv": "^8.2.0",
     "file-exists": "^5.0.1",
     "jest-extended": "^0.11.5",
+    "json2yaml": "^1.1.0",
     "jsonlint": "^1.6.3",
     "jsonresume-theme-even": "^0.6.0",
+    "jsonresume-theme-full": "^0.0.4",
+    "jsonresume-theme-papirus": "^0.0.5",
     "mime-types": "^2.1.27",
     "object-path-immutable": "^4.1.1",
     "puppeteer": "^16.1.0",
